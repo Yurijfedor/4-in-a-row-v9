@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4 in a row v9</title>
+  <link rel="stylesheet" href="../css/play_screen.css">
+  <link href='https://fonts.googleapis.com/css?family=Suez One' rel='stylesheet'>
+</head>
+<body>
+  <header id="header_id">
+    <div class="container">
+      <div class="players">
+        <div class="pl_wrap">
+          <div class="player1">
+            <div class="player1_circle">
+            </div>
+          </div>  
+          <div id="pl_1">
+            <p class="players_title" id="pl_1sub">Player 1</p>
+            <div class="wrap_players_score">
+              <p class="after_players_title_1" id="after_players_title_1">:</p><p class="player1_score" id="result_1"></p>
+            </div>
+          </div>
+        </div>
+        <div class="pl_wrap">
+          <div class="player2">
+            <div class="player2_circle">
+            </div>  
+          </div>
+          <div id="pl_2">
+            <p class="players_title" id="pl_2sub">Player 2</p>
+            <div class="wrap_players_score">
+              <p class="after_players_title_2" id="after_players_title_2">:</p><p class="player2_score" id="result_2"></p>
+            </div>
+          </div>
+        </div>
+        <div class="wrap_result">
+          <div id="result" class="result">
+            Who's the round winner?
+          </div>
+        </div>
+        <div class="wrap_menu" id="wrap_menu">
+          <a class="menu" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+      </div>
+      <div class="wrap_roundCount">
+        <p class="roundCount">
+        </p>
+        <p class="roundCount" id="roundCount_id">
+        </p>
+      </div>
+    </div>
+  </header>
+  <section class="game_screen" id="game_screen">
+    <div class="container">
+      <div class="game_screen_wrap">
+        <div class="game_screen_square">
+          <div class="game_screen_wrap_circle">
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="circle">
+              <div class="circle_inside">
+              </div>
+            </div>
+            <div class="block_off" id="block_off_id">
+            </div>
+            <div class="show_the_winner" id="show_the_winner">
+              <p class="show_the_winner_title">
+              </p>
+            </div>
+          </div>
+        </div>   
+      </div>
+    </div>
+  </section>
+  <div class="wrap_btn">
+    <button class="custom-btn btn-7 next_round" id="btn_4">
+      <span>
+        Next round
+      </span>
+    </button>
+    <button class="start-game-btn btn-8 new_game" id="btn_5">
+      <span>
+        Start new game
+      </span>
+    </button>
+    <button class="restart-round-btn btn-9 restart_round" id="btn_6">
+      <span>
+        Restart round
+      </span>
+    </button>
+  </div>
+  <div class="name_players_wrap" id="name_players_wrap">
+    <h1 class="name_players_title">Enter player's name</h1>
+    <div class="player_1">
+      <p class="title_player_name">Player 1</p>
+      <input type="text" maxlength="10" class="input_name" id="inp_1">
+    </div>
+    <div class="player_2">
+      <p class="title_player_name">Player 2</p>
+      <input type="text" maxlength="10" class="input_name" id="inp_2">
+    </div>
+    <div id="out_block">
+
+    </div>
+    <div class="wrap_button">
+      <button class="custom-btn btn-7" id="btn_7">
+        <span>
+          Apply
+        </span>
+      </button>
+      <button class="custom-btn btn-7" id="btn_8">
+        <span>
+          Cancel
+        </span>
+      </button>
+    </div>
+  </div>
+  <div class="game_menu" id="game_menu">
+    <div class="game_menu_board">
+      <button class="main-menu-btn btn-10 main_menu" id="btn_9">
+        <span>
+          Main menu
+        </span>
+      </button>
+      <button class="main-menu-btn btn-10 main_menu" id="btn_10">
+        <span>
+          Settings
+        </span>
+      </button>
+      <button class="main-menu-btn btn-10 main_menu" id="btn_12">
+        <span>
+          New game
+        </span>
+      </button>
+      <button class="main-menu-btn btn-10 main_menu" id="btn_11">
+        <span>
+          Back to game
+        </span>
+      </button>
+    </div>
+  </div>
+  <script src="../js/play_screen.js"></script>
+</body>
+</html>

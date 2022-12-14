@@ -1,0 +1,334 @@
+html, body {
+  -webkit-font-smoothing: antialiased;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	display: table;
+}
+
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0; 
+  overflow: hidden;	
+	background: radial-gradient(circle, rgba(34,34,34,1) 0%, rgba(62,62,62,1) 0%, rgba(18,18,18,1) 100%);
+}
+
+div, p, input, button, form, span, a, ul, li, {
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+	transition: all .4s ease;
+}
+
+ul, p{
+	margin: 0;
+	padding: 0;  
+}
+
+nav ul{
+	display: flex;
+}
+
+li{
+	list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+  padding: 0;
+}
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.main_menu {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  z-index: 2;
+}
+
+.circles_animation {
+  position: absolute;
+  z-index: 0;
+}
+
+#play {
+  position: relative;
+  z-index: 9999;
+}
+
+.main_menu_wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.main_menu_title {
+  font-size: 100px;
+  text-shadow: 1px 10px 2px rgb(77, 77, 77), rgb(0, 0, 0) 9px 0 5px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* button */ 
+
+.custom-btn {
+  align-self: center;
+  width: 300px;
+  height: 40px;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  margin-bottom: 30px;
+}
+
+.custom-btn:last-child {
+  margin-bottom: 0px;
+}
+
+.btn-7 {
+  background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-7 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-7:before,
+.btn-7:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: rgba(251,75,2,1);
+  box-shadow:
+   7px 7px 20px 0px rgba(0,0,0,.2),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+  transition: all 0.3s ease;
+}
+.btn-7:before{
+   height: 0%;
+   width: 2px;
+}
+.btn-7:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-7:hover{
+  color: rgba(251,75,2,1);
+  background: white;
+}
+.btn-7:hover:before {
+  height: 100%;
+}
+.btn-7:hover:after {
+  width: 100%;
+}
+.btn-7 span:before,
+.btn-7 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: rgba(251,75,2,1);
+  box-shadow:
+   
+   7px 7px 20px 0px rgba(0,0,0,.2),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+  transition: all 0.3s ease;
+}
+.btn-7 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-7 span:after {
+  height: 2px;
+  width: 0%;
+}
+.btn-7 span:hover:before {
+  height: 100%;
+}
+.btn-7 span:hover:after {
+  width: 100%;
+}
+
+/*end of button */ 
+
+.volume_on {
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+#volume_off_line {
+  position: absolute;
+  top: -25px;
+  left: 40px;
+  border:2px solid rgb(0, 0, 0);
+  width:100px;
+  height:0px;
+  -moz-transform:rotate(-30deg); /* Для Firefox */
+  -ms-transform: rotate(-30deg); /* Для IE */
+  -webkit-transform: rotate(-30deg); /* Для Safari, Chrome, iOS */
+  -o-transform: rotate(-30deg); /* Для Opera */
+  transform: rotate(-30deg);
+}
+
+#play {
+  position: relative;
+  z-index: 0;
+}
+
+#blocker_off {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: black;
+  top: 650px;
+  left: 0px;
+  opacity: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.blocker_on {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: black;
+  top: 650px;
+  left: 0px;
+  opacity: 0;
+  z-index: 9999;
+}
+
+/* PRELOADER */
+
+.wrapper {
+  display: none;
+  /* Hазмер и позиционирование */
+  font-size: 25px; /* 1em */
+  width: 8em;
+  height: 8em;
+  margin: -180px auto;
+  
+
+  /* Стилизация */
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1em dashed rgb(143, 143, 143);
+  box-shadow:
+      inset 0 0 2em rgb(70, 70, 70),
+      0 0 0 0.7em rgb(255, 255, 255);
+  animation: rota 3.5s linear infinite;
+
+  /* Стили для текста */
+  
+   
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 .07em rgba(255, 153, 0, 0.9);
+  line-height: 8em;
+}
+
+.wrapper:before,
+.wrapper:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: inherit;
+    box-shadow: inset 0 0 2em rgb(255, 255, 255);
+    border: 1em dashed;
+}
+ 
+.wrapper:before {
+    border-color: rgb(255, 255, 255);
+    top: 0; right: 0; bottom: 0; left: 0;
+}
+ 
+.wrapper:after {
+    border-color: rgb(255, 102, 0);
+    top: 1em; right: 1em; bottom: 1em; left: 1em;
+}
+
+.wrapper .inner {
+  width: 100%;
+  height: 100%;
+  animation: rota 3.5s linear reverse infinite;
+}
+
+.demo-4 .wrapper span {
+  display: inline-block;
+  animation: placeholder 1.5s ease-out infinite;
+}
+
+.wrapper span:nth-child(1)  {animation-name: loading-1;}
+.wrapper span:nth-child(2)  {animation-name: loading-2;}
+.wrapper span:nth-child(3)  {animation-name: loading-3;}
+.wrapper span:nth-child(4)  {animation-name: loading-4;}
+.wrapper span:nth-child(5)  {animation-name: loading-5;}
+.wrapper span:nth-child(6)  {animation-name: loading-6;}
+.wrapper span:nth-child(7)  {animation-name: loading-7;}
+.wrapper span:nth-child(8)  {animation-name: loading-8;}
+
+@keyframes rota {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes loading-1 {
+  12.5% { opacity: 0.3; }
+}
+
+@keyframes loading-2 {
+  25% { opacity: 0.3; }
+}
+
+@keyframes loading-3 {
+  37.5% { opacity: 0.3; }
+}
+
+@keyframes loading-4 {
+  50% { opacity: 0.3; }
+}
+
+@keyframes loading-5 {
+  62.5% { opacity: 0.3; }
+}
+
+@keyframes loading-6 {
+  75% { opacity: 0.3; }
+}
+
+@keyframes loading-7 {
+  87.5% { opacity: 0.3; }
+}
+
+@keyframes loading-8 {
+  100% { opacity: 0.3; }
+}
+
+/* END OF PRELOADER */
